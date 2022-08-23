@@ -20,9 +20,9 @@ def home():
     if 'loggedin' in session:
 
         app.config['S3_BUCKET'] = "ims2022"
-        app.config['S3_KEY'] = "AKIA4TPF5IKYLQQDRFN4"
-        app.config['S3_SECRET'] = "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"
-        app.config['S3_LOCATION'] = 'ap-south-1'
+        app.config['S3_KEY'] = ""
+        app.config['S3_SECRET'] = ""
+        app.config['S3_LOCATION'] = ''
         s3 = boto3.client("s3",aws_access_key_id=app.config['S3_KEY'], aws_secret_access_key=app.config['S3_SECRET']) 
         payslips1 = s3.list_objects_v2(Bucket=app.config['S3_BUCKET'])
         user_id = session['id']
