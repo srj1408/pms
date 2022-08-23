@@ -19,7 +19,7 @@ def home():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     if 'loggedin' in session:
 
-        app.config['S3_BUCKET'] = "ims2022"
+        app.config['S3_BUCKET'] = ""
         app.config['S3_KEY'] = ""
         app.config['S3_SECRET'] = ""
         app.config['S3_LOCATION'] = ''
